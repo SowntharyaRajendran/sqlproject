@@ -1,0 +1,43 @@
+10. describe about left , right , inner , self , cross joins & unions , subquries
+
+Left join: it is a keyword which returns all rows from the left table and the matching rows from the right table.
+if there is no match then the result is NULL from the right side.
+
+eg. SELECT students.studentName, passed_stu.pass_stu.no
+FROM students
+LEFT JOIN Orders ON students.studentName = passed_stu.studentName
+ORDER BY students.studentName;
+
+
+Right join: it is a keyword which returns all rows from the right table and the matching rows from the left table.
+if there is no match then the result is NULL from the left side.
+
+eg.SELECT students.studentName, passed_stu.pass_stu.no
+FROM students
+RIGHT JOIN Orders ON students.studentName = passed_stu.studentName
+ORDER BY students.studentName;
+
+
+INNER JOIN: It Returns records that have matching values in both tables. 
+LEFT (OUTER) JOIN : Returns all records from the left table, and the matched records from the right table. 
+RIGHT (OUTER) JOIN : Returns all records from the right table, and the matched records from the left table.
+
+SELF JOIN: Itis used to join a table to itself i.e, each row in a table is joined to itself and every other row in that table.
+CROSS JOIN: Also called CARTESIAN PRODUCT JOIN. It is used to combine each row of one table with each row of another table,
+ and return the Cartesian product of the sets of rows from the tables that are joined.
+
+UNIONS: It combines the results of two or more queries into a distinct single result
+ set that includes all the rows that belong to all queries in the Union.
+ In this operation, it combines two more queries and removes the duplicates.
+
+eg. SELECT column1(s) FROM student1
+UNION ALL
+SELECT column1(s) FROM student2;
+
+SUBQUERIES: subquery is a query that appears inside another query statement.
+TYPES OF SUBQUERIES
+1.Single-row subquery,
+2.multiple row subquery, 
+3.multiple column subquery, 
+4.correlated subquery,  
+5.nested subquery.  
